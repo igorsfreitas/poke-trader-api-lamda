@@ -1,6 +1,10 @@
 import type { AWS } from '@serverless/typescript';
 
-import hello from '@functions/hello';
+import addUser from '@functions/add-user';
+import getUsers from '@functions/get-users';
+import getProposals from '@functions/get-proposals';
+import addProposal from '@functions/add-proposal';
+import acceptProposal from '@functions/accept-proposal';
 
 const serverlessConfiguration: AWS = {
   service: 'poke-trader',
@@ -14,7 +18,7 @@ const serverlessConfiguration: AWS = {
       includeModules: true,
     },
   },
-  plugins: ['serverless-webpack'],
+  plugins: ['serverless-webpack', 'serverless-offline'],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
@@ -28,7 +32,7 @@ const serverlessConfiguration: AWS = {
     lambdaHashingVersion: '20201221',
   },
   // import the function via paths
-  functions: { hello },
+  functions: { addUser, getUsers, addProposal, getProposals, acceptProposal },
 };
 
 module.exports = serverlessConfiguration;

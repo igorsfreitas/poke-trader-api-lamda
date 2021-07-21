@@ -14,7 +14,12 @@
     "@middy/http-json-body-parser": "^1.5.2",
     "@types/uuid": "^8.3.1",
     "aws-sdk": "^2.946.0",
+    "axios": "^0.21.1",
+    "flakeid": "^1.0.0",
+    "mongoose": "^5.13.2",
+    "mongoose-long": "^0.4.0",
     "pino": "^6.12.0",
+    "shallow-equal-object": "^1.1.1",
     "source-map-support": "^0.5.19",
     "uuid": "^8.3.2"
   },

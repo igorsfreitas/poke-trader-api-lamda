@@ -16,7 +16,13 @@ export default ({
 
         handler.context.callbackWaitsForEmptyEventLoop = false
 
-        const { URI: databaseURI } = handler.context[databaseURIPath]
+        const databaseURI  = 'mongodb+srv://poke-trader-dev:88922974@cluster0.3u742.mongodb.net/poke-trader-dev?retryWrites=true&w=majority'
+        
+        //'mongodb://poke-trader-dev:88922974@cluster0.3u742.mongodb.net:27017/poke-trader-dev?ssl=true&authSource=admin&retryWrites=true&w=majority'
+        
+        //'mongodb://poke-trader-dev:88922974@cluster0.3u742.mongodb.net/poke-trader-dev?retryWrites=true&w=majority'
+        
+        // mongodb+srv://poke-trader-dev:<password>@cluster0.3u742.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
         if (mongoose.connection.readyState === 1) {
             logger.info('=> Using existing database connection')
